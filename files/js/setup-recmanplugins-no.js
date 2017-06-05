@@ -8,7 +8,7 @@
  * @see http://codereview.stackexchange.com/questions/15166/best-way-to-organize-javascript-for-website
  */
 
-(function(exports) {
+(function (exports) {
 
 	'use strict';
 
@@ -16,7 +16,7 @@
 		registry = []; // Collection of module.
 
 	// Adds module to collection:
-	exports.register = function(moduleDeclaration) {
+	exports.register = function (moduleDeclaration) {
 
 		registry.push(moduleDeclaration); // Add module to registry.
 
@@ -30,7 +30,7 @@
 	};
 
 	// Executes every module:
-	exports.init = function() {
+	exports.init = function () {
 
 		initialized = true; // Flippin' switches!
 
@@ -45,7 +45,7 @@
 
 }(window.GHB = window.GHB || {})); // Use existing namespace or make a new object of that namespace.
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 	if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
 
@@ -145,7 +145,7 @@ $(document).ready(function() {
 				message: 'is_extension_installed',
 				extension_id: extension_id
 
-			}, function(reply) {
+			}, function (reply) {
 
 				if (reply) {
 
@@ -177,13 +177,13 @@ $(document).ready(function() {
 
 					$('head').append('<link rel="chrome-webstore-item" href="' + chrome_install_url + '">');
 
-					$('.extension.active .thumbnail').each(function(index) {
+					$('.extension.active .thumbnail').each(function (index) {
 
 						$(this).removeClass('selected');
 
 					});
 
-					$('#step1').find('.extension-not-installed').find('.extension-name').each(function(index) {
+					$('#step1').find('.extension-not-installed').find('.extension-name').each(function (index) {
 
 						$('#step1 .extension-not-installed .extension-name').text(extension_name);
 
@@ -191,9 +191,9 @@ $(document).ready(function() {
 
 					$('#step1').find('.extension-not-installed').find('.btn-install-extension').text('Install the ' + extension_name + ' extension');
 
-					$('#step1').find('.extension-not-installed').find('a').each(function(index) {
+					$('#step1').find('.extension-not-installed').find('a').each(function (index) {
 
-						$(this).on("click", function(event) {
+						$(this).on("click", function (event) {
 
 							event.preventDefault();
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
 							console.log('Installation initialized...');
 
 							chrome.webstore.install(chrome_install_url,
-								function() {
+								function () {
 
 									//  Success!
 
@@ -211,7 +211,7 @@ $(document).ready(function() {
 									console.log('Installation succeeded...');
 
 								},
-								function(err) {
+								function (err) {
 
 									//  Error :(
 
@@ -233,7 +233,7 @@ $(document).ready(function() {
 
 		}
 
-		$('.extension.active .thumbnail').click(function(e) {
+		$('.extension.active .thumbnail').click(function (e) {
 
 			$(this).addClass('selected');
 
@@ -282,7 +282,7 @@ $(document).ready(function() {
 
 		});
 
-		$('.ext_ramp_beta').click(function(e) {
+		$('.ext_ramp_beta').click(function (e) {
 
 			$(this).addClass('selected');
 			console.log('hey hey hey');
@@ -310,7 +310,7 @@ $(document).ready(function() {
 
 		function reset_validation_icons() {
 
-			$('#step2 .dialog-info .permissions li').each(function() {
+			$('#step2 .dialog-info .permissions li').each(function () {
 
 				$(this)
 					.removeClass('invalid')
@@ -319,7 +319,7 @@ $(document).ready(function() {
 					.text('import_export');
 			});
 
-			$('#step2 .dialog-info .permissions li .response small').each(function() {
+			$('#step2 .dialog-info .permissions li .response small').each(function () {
 
 				$(this).text('');
 
@@ -369,7 +369,7 @@ $(document).ready(function() {
 					url: apiUrl,
 					method: 'GET',
 					dataType: 'json',
-					error: function(jqXHR, textStatus, errorThrown) {
+					error: function (jqXHR, textStatus, errorThrown) {
 
 						// Default error
 						//console.debug(jqXHR);
@@ -385,7 +385,7 @@ $(document).ready(function() {
 						reset_validation_icons();
 
 					},
-					success: function(data, textStatus, jqXHR) {
+					success: function (data, textStatus, jqXHR) {
 
 						if (data.error) {
 
@@ -471,7 +471,7 @@ $(document).ready(function() {
 						url: apiUrl,
 						method: 'GET',
 						dataType: 'json',
-						error: function(jqXHR, textStatus, errorThrown) {
+						error: function (jqXHR, textStatus, errorThrown) {
 
 							// Default error
 							//console.debug(jqXHR);
@@ -485,7 +485,7 @@ $(document).ready(function() {
 							$('#apiKey').closest('.form-group').find('.help-block').text('There was a problem while connecting to Recruitment Manager. Please try again.').fadeIn();
 
 						},
-						success: function(data, textStatus, jqXHR) {
+						success: function (data, textStatus, jqXHR) {
 
 							// Default error
 							//console.debug(data);
@@ -563,7 +563,7 @@ $(document).ready(function() {
 						url: apiUrl,
 						method: 'GET',
 						dataType: 'json',
-						error: function(jqXHR, textStatus, errorThrown) {
+						error: function (jqXHR, textStatus, errorThrown) {
 
 							// Default error
 							//console.debug(jqXHR);
@@ -577,7 +577,7 @@ $(document).ready(function() {
 							$('#apiKey').closest('.form-group').find('.help-block').text('There was a problem while connecting to Recruitment Manager. Please try again.').fadeIn();
 
 						},
-						success: function(data, textStatus, jqXHR) {
+						success: function (data, textStatus, jqXHR) {
 
 							// Default error
 							//console.debug(data);
@@ -657,7 +657,7 @@ $(document).ready(function() {
 						url: apiUrl,
 						method: 'GET',
 						dataType: 'json',
-						error: function(jqXHR, textStatus, errorThrown) {
+						error: function (jqXHR, textStatus, errorThrown) {
 
 							// Default error
 							//console.debug(jqXHR);
@@ -671,7 +671,7 @@ $(document).ready(function() {
 							$('#apiKey').closest('.form-group').find('.help-block').text('There was a problem while connecting to Recruitment Manager. Please try again.').fadeIn();
 
 						},
-						success: function(data, textStatus, jqXHR) {
+						success: function (data, textStatus, jqXHR) {
 
 							// Default error
 							//console.debug(data);
@@ -751,7 +751,7 @@ $(document).ready(function() {
 						url: apiUrl,
 						method: 'GET',
 						dataType: 'json',
-						error: function(jqXHR, textStatus, errorThrown) {
+						error: function (jqXHR, textStatus, errorThrown) {
 
 							// Default error
 							//console.debug(jqXHR);
@@ -765,7 +765,7 @@ $(document).ready(function() {
 							$('#apiKey').closest('.form-group').find('.help-block').text('There was a problem while connecting to Recruitment Manager. Please try again.').fadeIn();
 
 						},
-						success: function(data, textStatus, jqXHR) {
+						success: function (data, textStatus, jqXHR) {
 
 							// Default error
 							//console.debug(data);
@@ -844,8 +844,8 @@ $(document).ready(function() {
 			}
 
 			function check_if_validation_is_done() {
-				$.when(validate_api_permissions()).done(function() {
-					setTimeout(function() {
+				$.when(validate_api_permissions()).done(function () {
+					setTimeout(function () {
 						console.log('API-validation and permissions check done!');
 
 						if (validPermissions === 4) {
@@ -872,15 +872,15 @@ $(document).ready(function() {
 							}
 
 							$.when(all_permissions_a_ok())
-								.done(function() {
+								.done(function () {
 
-									setTimeout(function() {
+									setTimeout(function () {
 
 										next_tab();
 
 										fbq('trackCustom', 'InitiateCheckout');
 
-										$.map(corporations_info, function(obj) {
+										$.map(corporations_info, function (obj) {
 
 											obj.id = obj.id || obj.corporation_id; // replace pk with your identifier
 
@@ -899,14 +899,14 @@ $(document).ready(function() {
 												minimumResultsForSearch: 5
 
 											})
-											.on("change", function(e) {
+											.on("change", function (e) {
 
 												selected_corporation_id = $('#corporationName').select2('data').id;
 												selected_corporation_name = $('#corporationName').select2('data').text;
 
 												//var selected_department = $('#departmentName').select2('data').id;
 
-												var departments_data = $.map(departments_info, function(obj) {
+												var departments_data = $.map(departments_info, function (obj) {
 
 													if (obj.corporation_id === selected_corporation_id) {
 
@@ -941,7 +941,7 @@ $(document).ready(function() {
 														.find('.help-block')
 														.attr("data-fv-result", "INVALID");
 
-													$.when($('.container-for-departmentName').fadeOut()).done(function() {
+													$.when($('.container-for-departmentName').fadeOut()).done(function () {
 
 														$('#step3')
 															.find('.dialog-warning.departments')
@@ -981,13 +981,13 @@ $(document).ready(function() {
 														.find('.help-block')
 														.attr("data-fv-result", "");
 
-													$.when($('#step3').find('.dialog-warning.departments').fadeOut()).done(function() {
+													$.when($('#step3').find('.dialog-warning.departments').fadeOut()).done(function () {
 
 														$.when($('#extensionSetup')
 															.find('[name="departmentName"]')
 															.select2('data', null)
 															.find('option')
-															.each(function() {
+															.each(function () {
 
 																if ($(this).val() === '') {
 
@@ -998,14 +998,14 @@ $(document).ready(function() {
 																	$(this).remove();
 																}
 
-															})).done(function() {
+															})).done(function () {
 
 															$('#step3')
 																.find('.next-step')
 																.removeClass('reload')
 																.text('Save and Continue');
 
-															$.map(departments_data, function(obj) {
+															$.map(departments_data, function (obj) {
 
 																obj.id = obj.id || obj.department_id; // replace pk with your identifier
 
@@ -1037,7 +1037,7 @@ $(document).ready(function() {
 												minimumResultsForSearch: 5
 
 											})
-											.on("change", function(e) {
+											.on("change", function (e) {
 
 												selected_department_id = $('#departmentName').select2('data').id;
 												selected_department_name = $('#departmentName').select2('data').text;
@@ -1046,7 +1046,7 @@ $(document).ready(function() {
 
 												var coworkers_data = '';
 
-												coworkers_data = $.map(coworkers_info, function(obj) {
+												coworkers_data = $.map(coworkers_info, function (obj) {
 
 													if (obj.department_id === selected_department_id) {
 
@@ -1133,13 +1133,13 @@ $(document).ready(function() {
 
 													$.when($('#step3')
 														.find('.dialog-warning.employees')
-														.fadeOut()).done(function() {
+														.fadeOut()).done(function () {
 
 														$.when($('#extensionSetup')
 															.find('[name="employeeName"]')
 															.select2('data', null)
 															.find('option')
-															.each(function() {
+															.each(function () {
 
 																if ($(this).val() === '') {
 
@@ -1150,7 +1150,7 @@ $(document).ready(function() {
 																	$(this).remove();
 																}
 
-															})).done(function() {
+															})).done(function () {
 
 															$('#step3')
 																.find('.next-step')
@@ -1167,7 +1167,7 @@ $(document).ready(function() {
 
 															calculate_monthly_cost();
 
-															$.map(coworkers_data, function(obj) {
+															$.map(coworkers_data, function (obj) {
 
 																obj.id = obj.id || obj.user_id; // replace pk with your identifier
 
@@ -1201,17 +1201,17 @@ $(document).ready(function() {
 												minimumResultsForSearch: 1,
 												containerCssClass: 'select2-custom-search',
 												dropdownCssClass: 'select2-custom-search',
-												formatNoMatches: function(term) {
+												formatNoMatches: function (term) {
 													return '<h6>Attention! We\'ve encountered the following issues:</h6><p>We were Unable to find your name. Please contact your system administrator to get access to Recruitment Manager.</p>';
 												}
 
 											})
-											.on('select2-opening', function() {
+											.on('select2-opening', function () {
 
 												console.log('opening');
 
 											})
-											.on('select2-open', function() {
+											.on('select2-open', function () {
 
 												$('#extensionSetup')
 													.formValidation('updateStatus', 'employeeName', 'NOT_VALIDATED')
@@ -1260,7 +1260,7 @@ $(document).ready(function() {
 													.hide();
 
 											})
-											.on('select2-select', function() {
+											.on('select2-select', function () {
 
 												$('body')
 													.find('.select2-drop.select2-custom-search')
@@ -1274,7 +1274,7 @@ $(document).ready(function() {
 													.show()
 
 											})
-											.on('select2-close', function() {
+											.on('select2-close', function () {
 
 												$('body')
 													.find('.select2-container.select2-custom-search')
@@ -1296,7 +1296,7 @@ $(document).ready(function() {
 												console.log('close');
 
 											})
-											.on('select2-close', function() {
+											.on('select2-close', function () {
 
 												$('.select2-custom-search .select2-search input')
 													.closest('.input-group')
@@ -1319,7 +1319,7 @@ $(document).ready(function() {
 
 												}
 
-												var employee_data = $.map(coworkers_info, function(obj) {
+												var employee_data = $.map(coworkers_info, function (obj) {
 
 													if (obj.user_id === selected_employeee_id) {
 
@@ -1331,13 +1331,13 @@ $(document).ready(function() {
 
 												console.log(employee_data);
 
-												var employee_mobile_phone = $.map(employee_data, function(obj) {
+												var employee_mobile_phone = $.map(employee_data, function (obj) {
 
 													return obj.mobile_phone;
 
 												});
 
-												var employee_email = $.map(employee_data, function(obj) {
+												var employee_email = $.map(employee_data, function (obj) {
 
 													return obj.email;
 
@@ -1363,7 +1363,7 @@ $(document).ready(function() {
 														separateDialCode: true,
 														formatOnInit: true
 
-													})).done(function() {
+													})).done(function () {
 
 													$.when($('#extensionSetup')
 														.find('input[name="coWorkerMobileNumber"]')
@@ -1374,7 +1374,7 @@ $(document).ready(function() {
 														// .end()
 														// .find('[name="editPhoneNumber"]')
 														// .bootstrapSwitch('state', false)
-													).done(function() {
+													).done(function () {
 
 														if (!employee_mobile_phone.length) {
 
@@ -1440,7 +1440,7 @@ $(document).ready(function() {
 														};
 
 
-														$('#coWorkerMobileNumber').blur(function() {
+														$('#coWorkerMobileNumber').blur(function () {
 
 															formatMobileNumber();
 
@@ -1460,12 +1460,12 @@ $(document).ready(function() {
 
 											})
 											.end()
-											.on('click', '.country-list', function() {
+											.on('click', '.country-list', function () {
 
 												$('#extensionSetup').formValidation('revalidateField', 'coWorkerMobileNumber');
 
 											})
-											.on('init.field.fv', function(e, data) {
+											.on('init.field.fv', function (e, data) {
 												// $(e.target)  --> The field element
 												// data.fv      --> The FormValidation instance
 												// data.field   --> The field name
@@ -1495,7 +1495,7 @@ $(document).ready(function() {
 
 															callback: {
 
-																callback: function(value, validator, $field) {
+																callback: function (value, validator, $field) {
 
 																	if (value === '') {
 
@@ -1535,7 +1535,7 @@ $(document).ready(function() {
 
 															callback: {
 
-																callback: function(value, validator, $field) {
+																callback: function (value, validator, $field) {
 
 																	if (value === '') {
 
@@ -1575,7 +1575,7 @@ $(document).ready(function() {
 
 															callback: {
 
-																callback: function(value, validator, $field) {
+																callback: function (value, validator, $field) {
 
 																	if (value === '') {
 
@@ -1614,30 +1614,30 @@ $(document).ready(function() {
 
 															// }
 															callback: {
-																callback: function(value, validator, $field) {
+																callback: function (value, validator, $field) {
 																	var isValid = value === '' || $field.intlTelInput('isValidNumber'),
 																		err = $field.intlTelInput('getValidationError'),
 																		message = null;
 																	switch (err) {
-																		case intlTelInputUtils.validationError.INVALID_COUNTRY_CODE:
-																			message = 'The country code is not valid';
-																			break;
+																	case intlTelInputUtils.validationError.INVALID_COUNTRY_CODE:
+																		message = 'The country code is not valid';
+																		break;
 
-																		case intlTelInputUtils.validationError.TOO_SHORT:
-																			message = 'The phone number is too short';
-																			break;
+																	case intlTelInputUtils.validationError.TOO_SHORT:
+																		message = 'The phone number is too short';
+																		break;
 
-																		case intlTelInputUtils.validationError.TOO_LONG:
-																			message = 'The phone number is too long';
-																			break;
+																	case intlTelInputUtils.validationError.TOO_LONG:
+																		message = 'The phone number is too long';
+																		break;
 
-																		case intlTelInputUtils.validationError.NOT_A_NUMBER:
-																			message = 'The value is not a number';
-																			break;
+																	case intlTelInputUtils.validationError.NOT_A_NUMBER:
+																		message = 'The value is not a number';
+																		break;
 
-																		default:
-																			message = 'The phone number is not valid';
-																			break;
+																	default:
+																		message = 'The phone number is not valid';
+																		break;
 																	}
 
 																	return {
@@ -1685,7 +1685,7 @@ $(document).ready(function() {
 														validators: {
 															callback: {
 																message: 'You must agree to our Terms of Service before you can create your account.',
-																callback: function(value, validator, $field) {
+																callback: function (value, validator, $field) {
 																	return value === 'yes';
 																}
 															}
@@ -1695,7 +1695,7 @@ $(document).ready(function() {
 												}
 
 											})
-											.on('status.field.fv', function(e, data) {
+											.on('status.field.fv', function (e, data) {
 												// data.field     --> The field name
 												// data.element   --> The field element
 												// data.result    --> The result returned by the validator
@@ -1708,13 +1708,13 @@ $(document).ready(function() {
 
 													switch (data.status) {
 
-														case 'VALID':
-															$icon.html('phone_iphone');
-															break;
+													case 'VALID':
+														$icon.html('phone_iphone');
+														break;
 
-														case 'INVALID':
-															$icon.html('phone_iphone');
-															break;
+													case 'INVALID':
+														$icon.html('phone_iphone');
+														break;
 
 													}
 
@@ -1724,13 +1724,13 @@ $(document).ready(function() {
 
 													switch (data.status) {
 
-														case 'VALID':
-															$icon.html('mail');
-															break;
+													case 'VALID':
+														$icon.html('mail');
+														break;
 
-														case 'INVALID':
-															$icon.html('mail');
-															break;
+													case 'INVALID':
+														$icon.html('mail');
+														break;
 
 													}
 
@@ -1738,7 +1738,7 @@ $(document).ready(function() {
 
 											})
 											// This event will be triggered when the field passes given validator
-											.on('success.validator.fv', function(e, data) {
+											.on('success.validator.fv', function (e, data) {
 												// data.field     --> The field name
 												// data.element   --> The field element
 												// data.result    --> The result returned by the validator
@@ -1840,7 +1840,7 @@ $(document).ready(function() {
 
 											})
 											// This event will be triggered when the field doesn't pass given validator
-											.on('err.validator.fv', function(e, data) {
+											.on('err.validator.fv', function (e, data) {
 												// data.bv        --> The FormValidation.Base instance
 												// data.field     --> The field name
 												// data.element   --> The field element
@@ -1858,10 +1858,10 @@ $(document).ready(function() {
 											})
 											.bootstrapWizard({
 												tabClass: 'nav nav-tabs',
-												onTabClick: function(tab, navigation, index) {
+												onTabClick: function (tab, navigation, index) {
 													return validateTab(index);
 												},
-												onNext: function(tab, navigation, index) {
+												onNext: function (tab, navigation, index) {
 													var numTabs = $('#extensionSetup').find('.tab-pane').length,
 														isValidTab = validateTab(index - 1);
 													if (!isValidTab) {
@@ -1880,10 +1880,10 @@ $(document).ready(function() {
 
 													return true;
 												},
-												onPrevious: function(tab, navigation, index) {
+												onPrevious: function (tab, navigation, index) {
 													return validateTab(index + 1);
 												},
-												onTabShow: function(tab, navigation, index) {
+												onTabShow: function (tab, navigation, index) {
 													// Update the label of Next button when we are at the last tab
 													var numTabs = $('#extensionSetup').find('.tab-pane').length;
 													$('#extensionSetup')
@@ -2056,7 +2056,7 @@ $(document).ready(function() {
 
 		function check_if_company_exists_on_intercom() {
 
-			firebase_extension_ref.child(selected_department_id).on('value', function(snapshot) {
+			firebase_extension_ref.child(selected_department_id).on('value', function (snapshot) {
 
 				var firebase_company = snapshot.val();
 
@@ -2116,7 +2116,7 @@ $(document).ready(function() {
 
 		}
 
-		$('input').focus(function() {
+		$('input').focus(function () {
 
 			$(this).closest('.input-group').find('.input-group-addon').addClass('in-focus');
 
@@ -2125,7 +2125,7 @@ $(document).ready(function() {
 		});
 
 
-		$('input').blur(function() {
+		$('input').blur(function () {
 
 			$(this).closest('.input-group').find('.input-group-addon').removeClass('in-focus');
 
@@ -2169,13 +2169,13 @@ $(document).ready(function() {
 						.addClass('disabled')
 						.end()
 						.find('.form-control')
-						.each(function() {
+						.each(function () {
 
 							$(this).prop("disabled", true)
 
 						})
 
-					).done(function() {
+					).done(function () {
 
 						$('#extensionSetup')
 							.find('[name="employeeName"]')
@@ -2235,7 +2235,7 @@ $(document).ready(function() {
 
 
 
-						}, function(response) {
+						}, function (response) {
 
 							console.log(response);
 
@@ -2245,7 +2245,7 @@ $(document).ready(function() {
 
 								var firebase_user_ref = firebase_extension_ref.child(selected_department_id + '/users/' + selected_employeee_id);
 
-								firebase_user_ref.transaction(function(currentData) {
+								firebase_user_ref.transaction(function (currentData) {
 
 									if (currentData === null) {
 
@@ -2269,7 +2269,7 @@ $(document).ready(function() {
 
 									}
 
-								}, function(error, committed, snapshot) {
+								}, function (error, committed, snapshot) {
 
 									if (error) {
 
@@ -2340,7 +2340,7 @@ $(document).ready(function() {
 
 										function show_to_new_user_if_company_exists() {
 
-											$('#complete .intercom_company_name').each(function(index) {
+											$('#complete .intercom_company_name').each(function (index) {
 
 												$(this).text(selected_department_name);
 
@@ -2364,7 +2364,7 @@ $(document).ready(function() {
 
 										}
 
-										$.when(show_to_new_user_if_company_exists()).done(function() {
+										$.when(show_to_new_user_if_company_exists()).done(function () {
 
 											next_tab();
 
@@ -2408,7 +2408,7 @@ $(document).ready(function() {
 
 							}
 
-						}, function(error) {
+						}, function (error) {
 
 							if (error) {
 
@@ -2429,7 +2429,7 @@ $(document).ready(function() {
 									"account_manager": true,
 									"extension_activated": false,
 
-								}, function(error) {
+								}, function (error) {
 
 									if (error) {
 
@@ -2514,7 +2514,7 @@ $(document).ready(function() {
 
 					$.when($('#step4')
 						.find('.dialog')
-						.fadeOut()).done(function() {
+						.fadeOut()).done(function () {
 						$('#step4')
 							.find('.NOT_AUTHENTICATED')
 							.fadeIn()
@@ -2529,7 +2529,7 @@ $(document).ready(function() {
 
 				$.when($('#step4')
 					.find('.dialog')
-					.fadeOut()).done(function() {
+					.fadeOut()).done(function () {
 					$('#step4')
 						.find('.NOT_AUTHENTICATED')
 						.fadeIn()
@@ -2541,7 +2541,7 @@ $(document).ready(function() {
 
 				$.when($('#step4')
 					.find('.dialog')
-					.fadeOut()).done(function() {
+					.fadeOut()).done(function () {
 					$('#step4')
 						.find('.BAD_PARAMS')
 						.fadeIn()
@@ -2578,7 +2578,7 @@ $(document).ready(function() {
 		$('.nav-tabs > li a[title]').tooltip();
 
 		//Wizard
-		$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+		$('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
 			var $target = $(e.target);
 
@@ -2589,7 +2589,7 @@ $(document).ready(function() {
 
 		});
 
-		$('.next-step').click(function(e) {
+		$('.next-step').click(function (e) {
 
 			if ($(this).hasClass('not_validated')) {
 
@@ -2655,7 +2655,7 @@ $(document).ready(function() {
 					intercom_employeee_phone: intercom_company_account_manager_phone,
 					intercom_employeee_created_at: now
 
-				}, function(response) {
+				}, function (response) {
 
 					console.log(response);
 
@@ -2693,7 +2693,7 @@ $(document).ready(function() {
 							"monthly_spend": total_price_per_month,
 							"trial_started_at": trial_started_at,
 
-						}, function(error) {
+						}, function (error) {
 
 							if (error) {
 
@@ -2707,7 +2707,7 @@ $(document).ready(function() {
 
 									"extension_activated": true,
 
-								}, function(error) {
+								}, function (error) {
 
 									if (error) {
 
@@ -2750,7 +2750,7 @@ $(document).ready(function() {
 
 		});
 
-		$('.customer-support').on("click", function(event) {
+		$('.customer-support').on("click", function (event) {
 
 			event.preventDefault();
 
@@ -2766,6 +2766,10 @@ $(document).ready(function() {
 
 				Intercom('showNewMessage', 'Notice on Copyright Violation.\n\nYour message: ');
 
+			} else if ($(this).hasClass('sales-team')) {
+
+				Intercom('showNewMessage', 'Request for Custom Pricing Options\n\nYour message: ');
+
 			} else {
 
 				Intercom('showNewMessage');
@@ -2774,18 +2778,18 @@ $(document).ready(function() {
 
 		});
 
-		$('.confirm').click(function(e) {
+		$('.confirm').click(function (e) {
 
 			e.preventDefault();
 
-			setTimeout(function() {
+			setTimeout(function () {
 
 				$('#extensionSetup').find('.terms').find('.form-control-feedback').hide();
 
 			}, 50);
 
 			$.when($('#extensionSetup').formValidation('validate'))
-				.done(function() {
+				.done(function () {
 
 					if ($('#extensionSetup').data('formValidation').isValid()) {
 
@@ -2805,13 +2809,13 @@ $(document).ready(function() {
 							.end()
 							//.find('.form-control')
 							.find('#employeeName')
-							.each(function() {
+							.each(function () {
 
 								$(this).prop("disabled", true)
 
 							})
 
-						).done(function() {
+						).done(function () {
 
 							$('#extensionSetup')
 								.find('[name="employeeName"]')
@@ -2880,7 +2884,7 @@ $(document).ready(function() {
 								intercom_employeee_created_at: now
 
 
-							}, function(response) {
+							}, function (response) {
 
 								console.log(response);
 
@@ -2890,7 +2894,7 @@ $(document).ready(function() {
 
 									var firebase_user_ref = firebase_extension_ref.child(selected_department_id + '/users/' + selected_employeee_id);
 
-									firebase_user_ref.transaction(function(currentData) {
+									firebase_user_ref.transaction(function (currentData) {
 
 										if (currentData === null) {
 
@@ -2914,7 +2918,7 @@ $(document).ready(function() {
 
 										}
 
-									}, function(error, committed, snapshot) {
+									}, function (error, committed, snapshot) {
 
 										if (error) {
 
@@ -2985,7 +2989,7 @@ $(document).ready(function() {
 
 											function show_to_new_user_if_company_exists() {
 
-												$('#complete .intercom_company_name').each(function(index) {
+												$('#complete .intercom_company_name').each(function (index) {
 
 													$(this).text(selected_department_name);
 
@@ -3007,7 +3011,7 @@ $(document).ready(function() {
 
 											}
 
-											$.when(show_to_new_user_if_company_exists()).done(function() {
+											$.when(show_to_new_user_if_company_exists()).done(function () {
 
 												next_tab();
 
@@ -3051,7 +3055,7 @@ $(document).ready(function() {
 
 								}
 
-							}, function(error) {
+							}, function (error) {
 
 								if (error) {
 
@@ -3072,7 +3076,7 @@ $(document).ready(function() {
 										"account_manager": true,
 										"extension_activated": false,
 
-									}, function(error) {
+									}, function (error) {
 
 										if (error) {
 
@@ -3160,7 +3164,7 @@ $(document).ready(function() {
 
 		// Add keypress ENTER support for API-key input
 
-		$('#apiKey').keypress(function(e) {
+		$('#apiKey').keypress(function (e) {
 
 			if (e.which == 13) {
 
@@ -3172,7 +3176,7 @@ $(document).ready(function() {
 
 		});
 
-		$('.prev-step').click(function(event) {
+		$('.prev-step').click(function (event) {
 
 			event.preventDefault;
 
@@ -3187,7 +3191,7 @@ $(document).ready(function() {
 						.formValidation('updateStatus', 'coWorkerMobileNumber', 'VALID')
 						.formValidation('updateStatus', 'coWorkerEmail', 'VALID')
 					)
-					.done(function() {
+					.done(function () {
 
 						prev_tab();
 
@@ -3228,7 +3232,7 @@ $(document).ready(function() {
 
 	}
 
-	$('.terms-of-service').on("click", function(event) {
+	$('.terms-of-service').on("click", function (event) {
 
 		event.preventDefault();
 
@@ -3238,7 +3242,7 @@ $(document).ready(function() {
 
 	$('#extensionSetup').find('[name="agree"]').val('no');
 
-	$('.terms .material-icons').on('click', function() {
+	$('.terms .material-icons').on('click', function () {
 
 		if ($('#extensionSetup').find('[name="agree"]').val() === 'no') {
 
@@ -3254,7 +3258,7 @@ $(document).ready(function() {
 
 		}
 
-		setTimeout(function() {
+		setTimeout(function () {
 
 			$('#extensionSetup').find('.terms').find('.form-control-feedback').hide();
 
@@ -3278,7 +3282,7 @@ $(document).ready(function() {
 
 	});
 
-	$('#agreeButton, #disagreeButton').on('click', function() {
+	$('#agreeButton, #disagreeButton').on('click', function () {
 
 		var whichButton = $(this).attr('id');
 
@@ -3289,7 +3293,7 @@ $(document).ready(function() {
 			// Revalidate the field manually
 			.formValidation('revalidateField', 'agree');
 
-		setTimeout(function() {
+		setTimeout(function () {
 
 			$('#extensionSetup').find('.terms').find('.form-control-feedback').hide();
 
