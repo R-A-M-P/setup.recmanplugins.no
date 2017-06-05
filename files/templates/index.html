@@ -1,0 +1,586 @@
+<!-- @include includes/top.html -->
+<div class="content-8 v-center">
+	<div>
+		<div class="container">
+			<div class="img">
+				<img src="./frameworks/startup/common-files/icons/magic-wand@2x.png" alt="" style="width: 197px;">
+			</div>
+			<h3 class="header"><strong>SETUP</strong> YOUR EXTENSION</h3>
+			<div class="browser-is-not-chrome collapse">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div class="wizard">
+							<div class="tab-content">
+								<div class="tab-pane active" role="tabpanel" id="step0">
+									<div class="dialog dialog-warning">
+										<h6 class="text-center">Attention! We've encountered the following issues:</h6>
+										<p class="text-center">
+											All software from RAMP is developed to work specifically on Google Chrome.
+										</p>
+										<p class="text-center">
+											<strong>You're not using the Google Chrome browser.</strong>
+										</p>
+										<p class="text-center">
+											To setup your extension, <a href="https://www.google.com/chrome/browser/desktop/">please use Google Chrome 40.0 or later</a>.
+										</p>
+									</div>
+									<a href="https://www.google.com/chrome/browser/desktop/" class="btn btn-large btn-clear">Download Google Chrome</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<form id="extensionSetup" class="browser-is-chrome collapse">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div class="wizard">
+							<div class="wizard-inner">
+								<div class="connecting-line"></div>
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+										<a href="#step0" data-toggle="tab" aria-controls="step0" role="tab" title="Instructions">
+											<span class="round-tab">
+                                            <i class="material-icons">live_help</i>
+                                        </span>
+										</a>
+									</li>
+									<li role="presentation" class="disabled">
+										<a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Extension">
+											<span class="round-tab">
+                                            <i class="material-icons">extension</i>
+                                        </span>
+										</a>
+									</li>
+									<li role="presentation" class="disabled">
+										<a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="API">
+											<span class="round-tab">
+                                            <i class="material-icons">import_export</i>
+                                        </span>
+										</a>
+									</li>
+									<li role="presentation" class="disabled">
+										<a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Account">
+											<span class="round-tab">
+                                            <i class="material-icons">business_center</i>
+                                        </span>
+										</a>
+									</li>
+									<li role="presentation" class="disabled">
+										<a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="User">
+											<span class="round-tab">
+                                            <i class="material-icons">people</i>
+                                        </span>
+										</a>
+									</li>
+									<li role="presentation" class="subscription disabled">
+										<a href="#step5" data-toggle="tab" aria-controls="step5" role="tab" title="Subscription">
+											<span class="round-tab">
+                                            <i class="material-icons">credit_card</i>
+                                        </span>
+										</a>
+									</li>
+									<!-- <li role="presentation" class="disabled">
+                                        <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab" title="Activation">
+                                            <span class="round-tab">
+                                            <i class="material-icons">extension</i>
+                                        </span>
+                                        </a>
+                                    </li> -->
+									<li role="presentation" class="disabled">
+										<a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Success">
+											<span class="round-tab">
+                                            <i class="material-icons">cake</i>
+                                        </span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="tab-content">
+								<div class="tab-pane active" role="tabpanel" id="step0">
+									<h5>You're only seconds away from lift off!</h5>
+									<p>
+										To get started, please follow the instructions below.
+									</p>
+									<p>
+										<small>
+                                            To set up your extension, you need a Recruitment Manager API-key. Visit the <a href="https://help.recman.no/help/api/" target="_blank">Recruitment Manager Help Center</a> for information on how to obtain one, go to your <a href="https://www.recman.no/user/api.settings.php" target="_blank">Recruitment Manager API Settings</a> to generate one, or contact your system administrator if you don't have access to the Recruitment Manager API Settings.
+                                        </small>
+									</p>
+									<button type="button" class="btn btn-large btn-clear next-step">START YOUR EXTENSION SETUP</button>
+								</div>
+								<div class="tab-pane" role="tabpanel" id="step1">
+									<h5>Our Extensions</h5>
+									<p>Select the extension you wish to set up.</p>
+									<div class="row extensions">
+										<!--<div class="col-sm-6">
+											<div class="extension active">
+												<a class="thumbnail ext_in_old">
+													<i class="material-icons">person_pin</i>
+												</a>
+												<h6>LinkedIn to RM</h6>
+												<small><i>(for the old LinkedIn design)</i></small>
+											</div>
+										</div> -->
+										<div class="col-sm-6 col-sm-offset-3">
+											<div class="extension active">
+												<a class="thumbnail ext_in_new">
+													<i class="fa fa-rocket" aria-hidden="true"></i>
+												</a>
+												<h6>RAMP</h6>
+												<small><i>(for the 2017 LinkedIn redesign, Finn.no and Nav.no)</i></small>
+											</div>
+										</div>
+										<!--<div class="col-sm-4">
+											<div class="extension">
+												<a class="thumbnail ext_finn_rm">
+													<i class="material-icons">account_box</i>
+												</a>
+												<h6>Finn CVDb to RM</h6>
+												<small><i>(upcoming Q3 2016)</i></small>
+											</div>
+										</div>
+										<div class="col-sm-4 ">
+											<div class="extension">
+												<a class="thumbnail ext_nav_rm">
+													<i class="material-icons">assignment_ind</i>
+												</a>
+												<h6>NAV CVDb to RM</h6>
+												<small><i>(upcoming Q4 2016)</i></small>
+											</div>
+										</div> -->
+									</div>
+									<div class="row extensions">
+										<div class="extension">
+											<a class="ext_ramp_beta">Click here if you're a registered Beta Tester</a>
+										</div>
+									</div>
+									<div class="row extension-not-installed collapse">
+										<div class="col-sm-12">
+											<div class="dialog dialog-warning">
+												<h6 class="text-center">Attention! We've encountered the following issues:</h6>
+												<p class="text-center">
+													We can't find <strong><span class="extension-name">Extension Name</span></strong> among your Google Chrome Extensions.
+												</p>
+												<p class="text-center">
+													Please install <strong><span class="extension-name">Extension Name</span></strong> before you continue your setup.
+												</p>
+												<p class="text-center">
+													You can <a href="#">install <span class="extension-name">Extension Name</span> via the Chrome Web Store</a>.
+												</p>
+											</div>
+											<a href="#" class="btn btn-large btn-clear btn-install-extension">Install</a>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane" role="tabpanel" id="step2">
+									<h5>API-permissions</h5>
+									<p>We'll need to check if your API-key have the correct permissions set so that your extension can communicate with the Recruitment Manager API-modules it needs access to.</p>
+									<div class="dialog dialog-info">
+										<p>This extension needs access to the folowing <a href="https://help.recman.no/article-categories/api/" target="_blank">Recruitment Manager API-modules</a>:</p>
+										<ul class="permissions">
+											<li class="candidates"><i class="material-icons">import_export</i> Candidates
+												<div class="response"><small></small></div>
+											</li>
+											<li class="co-workers"><i class="material-icons">import_export</i> Co-workers
+												<div class="response"><small></small></div>
+											</li>
+											<li class="corporations"><i class="material-icons">import_export</i> Corporations
+												<div class="response"><small></small></div>
+											</li>
+											<li class="departments"><i class="material-icons">import_export</i> Departments
+												<div class="response"><small></small></div>
+											</li>
+											<!-- <li class="projects"><i class="material-icons">import_export</i> Projects
+                                                    <div class="response"><small></small></div>
+                                                </li> -->
+										</ul>
+									</div>
+									<div class="row no-gutter">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label for="apiKey">Generated API-key from Recruitment Manager</label>
+												<div class="input-group">
+													<input type="text" id="apiKey" name="apiKey" placeholder="Input your API-key here" class="form-control api-key" />
+													<span class="input-group-addon"><i class="material-icons">import_export</i></span>
+												</div>
+												<i class="form-control-feedback fv-icon-no-label material-icons invalid-icon" data-fv-icon-for="apiKey" style="display: none;"></i>
+												<small class="help-block" data-fv-validator="notEmpty" data-fv-for="apiKey" data-fv-result="INVALID" style="display: none;"></small>
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-large btn-clear next-step step_2 not_validated">VALIDATE YOUR API-KEY</button>
+								</div>
+								<div class="tab-pane" role="tabpanel" id="step3">
+									<h5>Company Setup</h5>
+									<p>Select the corporation and the department you are associated with.</p>
+									<div class="row">
+										<div class="col-xs-12 form-group select2">
+											<label for="corporationName">Corporation name</label>
+											<select class="form-control select select-default select-block mbl" name="corporationName" id="corporationName">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="dialog dialog-warning departments collapse">
+										<h6>Attention! We've encountered the following issues:</h6>
+										<p>This extensions requires that you have departments and employees associated with your corporation. To continue your extension setup, please <a href="https://www.recman.no/user/departments.settings.php" target="_blank">create a department</a>											and link it to your <strong><span class="corporationName">XXX</span></strong> corporation, then <a href="https://www.recman.no/user/users.settings.php" target="_blank">create or select an exixting employee</a> and link them to that department.</p>
+										<p>When this is done you can click on the reload button below and continue your setup.</p>
+									</div>
+									<div class="row container-for-departmentName collapse">
+										<div class="col-xs-12 form-group select2">
+											<label for="departmentName">Department name</label>
+											<select class="form-control select select-default select-block mbl" name="departmentName" id="departmentName">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="dialog dialog-warning employees collapse">
+										<h6>Attention! We've encountered the following issues:</h6>
+										<p>This extensions requires that you have employees associated with your departmens. To continue your extension setup, please <a href="https://www.recman.no/user/users.settings.php" target="_blank">create a new or select an exixting employee</a>											and link them to your <strong><span class="departmentName">XXX</span></strong> department.</p>
+										<p>When this is done you can click on the reload button below and continue your setup.</p>
+									</div>
+									<button type="button" class="btn btn-large btn-clear next-step step_3">SAVE AND CONTINUE</button>
+								</div>
+								<div class="tab-pane" role="tabpanel" id="step4">
+									<h5>User Setup</h5>
+									<p>Please select your name from the list below.</p>
+									<!-- <p><small>After selecting your name, we ask that you verify your mobile number. You'll get an SMS confirmation from <a href="https://www.accountkit.com/faq/" target="_blank">Account Kit powered by Facebook</a>, we use this to help you sign up, and you don't need a Facebook account to use Account Kit.</small></p> -->
+									<p><small>If you can't find your name, <a href="#" class="prev-step step_4">go back</a> and make sure you have selected the correct corporation/department, or <a href="#" class="customer-support">send us a message</a> and we'll get right back to you.</small></p>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="row">
+												<div class="col-xs-12 form-group select2 container-for-select2-custom-search">
+													<label for="employeeName">Employee name</label>
+													<select class="form-control select select-default select-block" name="employeeName" id="employeeName">
+														<option></option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row collapse" wrapper-for="employee-phone-number">
+										<div class="col-sm-6 form-group">
+											<label for="coWorkerMobileNumber">Phone number</label>
+											<div class="input-group">
+												<input type="tel" class="form-control" name="coWorkerMobileNumber" id="coWorkerMobileNumber" />
+												<span class="input-group-addon"><i class="material-icons">phone_iphone</i></span>
+											</div>
+										</div>
+										<div class="col-sm-6 form-group">
+											<label for="coWorkerEmail">Email address</label>
+											<div class="input-group">
+												<input type="email" class="form-control" placeholder="yourname@domain.com" name="coWorkerEmail" id="coWorkerEmail" />
+												<span class="input-group-addon"><i class="material-icons">email</i></span>
+											</div>
+										</div>
+										<div class="col-sm-12 form-group">
+											<div class="terms">
+												<i class="material-icons">check_box_outline_blank</i> Please read and agree to our <a href="#" class="terms-of-service">Terms of Service</a>
+												<input type="hidden" name="agree" value="no" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="dialog dialog-warning user-exists-on-intercom collapse">
+												<h6>Attention! We've encountered the following issues:</h6>
+												<p>The person you selected, <strong><span class="name-user-exists-on-intercom">John Doe</span></strong>, already have an account with us. If this is you, please <a href="#" class="customer-support activation-help">send us a request</a> and we'll
+													help you finish your setup.</p>
+											</div>
+											<div class="dialog dialog-warning NOT_AUTHENTICATED collapse">
+												<h6>Attention! We've encountered the following issues:</h6>
+												<p>A problem occurred while authenticating your mobile number. Please <a href="#" class="try-again">try again</a>.</p>
+											</div>
+											<div class="dialog dialog-warning BAD_PARAMS collapse">
+												<h6>Attention! We've encountered the following issues:</h6>
+												<p>An error occurred while processing your request. If you keep getting this message, check our system status or <a href="#">send us a message and we'll help you out</a>.</p>
+											</div>
+											<div class="dialog dialog-success PARTIALLY_AUTHENTICATED collapse">
+												<h6>Success! Your user account was created.</h6>
+												<p>Your details have been saved to our system. Click the button below to continue your extension setup.</p>
+											</div>
+										</div>
+									</div>
+									<div class="row btn-group-user-exists-on-intercom collapse">
+										<div class="col-xs-12">
+											<!-- <a class="btn btn-large btn-clear" href="https://my.recmanplugins.no/">my.recmanplugins.no</a> -->
+											<a href="#" class="btn btn-large btn-clear customer-support">send us a message</a>
+										</div>
+									</div>
+									<div class="row btn-group-create-account">
+										<div class="col-xs-6">
+											<button type="button" class="btn btn-large btn-default prev-step step_4">Back to Company Setup</button>
+										</div>
+										<div class="col-xs-6">
+											<button type="button" class="btn btn-large btn-clear confirm">Create your account</button>
+										</div>
+									</div>
+									<div class="row btn-group-go-to-subscription collapse">
+										<div class="col-xs-12">
+											<button type="button" class="btn btn-large btn-clear next-step step_4" formnovalidate>Get started for free</button>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane" role="tabpanel" id="step5">
+									<div class="company-does-not-exists-on-intercom collapse">
+										<h5>Start your subscription</h5>
+										<p>Plans for teams of all sizes – with no surprises</p>
+										<p>
+											<small>
+                                            RAMP subscriptions are billed monthly and calculated from the number of users you have on your Recruitment Manager account, so you get–and pay for–exactly what you need. No secret decoder ring required.
+                                        </small>
+										</p>
+										<h6>You have <span class="recman_users">XXX</span> user accounts on Recruitment Manager.</h6>
+										<p>
+											<small>The monthly RAMP subscription cost for <span class="selected_department_name">Company Name</span> comes in at</small></p>
+										<p class="monthly_cost">NOK <span class="price">000</span>,-</p>
+										<h6>No credit card required. Cancel anytime.</h6>
+										<p class="text-center">
+											<small>
+                                            Click on the button below to start your subscription today.
+                                        </small>
+										</p>
+										<button type="button" class="btn btn-large btn-danger next-step start_trial">Start your subscription</button>
+									</div>
+								</div>
+								<!-- <div class="tab-pane" role="tabpanel" id="step6">
+                                    <h3>Step 6</h3>
+                                    <p>Click the button below to activate your extension.</p>
+                                    <button type="button" class="btn btn-large btn-clear next-step activate_extension">Activate your extension</button>
+                                </div> -->
+								<div class="tab-pane" role="tabpanel" id="complete">
+									<h5>We think it's awesome you've joined</h5>
+									<p>
+										(and we're not just saying that)
+									</p>
+									<p>
+										<small>
+                                            Know that our door is always open, and that you should feel free to contact us for any reason whatsoever - just <a href="#" class="customer-support">send us a message</a>, and we'll get right back to you.
+                                        </small>
+									</p>
+									<div class="company-exists-on-intercom collapse">
+										<p><span class="intercom_company_name">You're all set! Company Name</span> got your back!</p>
+										<p>
+											<small>
+                                                Your subscription is managed by <span class="intercom_company_name">Company Name</span>, so if you have any questions regarding your subscription, please contact the Account Manager listed below:
+                                            </small>
+										</p>
+										<h6 class="intercom_company_account_manager_name">Account Manager Name</h6>
+										<p class="intercom_company_account_manager_phone">
+											<i class="material-icons">phone_iphone</i> <span>Account Manager Phone Number</span>
+										</p>
+										<p class="intercom_company_account_manager_email">
+											<i class="material-icons">email</i> <a href="#" target="_blank">Account Manager Email Address</a>
+										</p>
+									</div>
+									<!-- <p>
+                                        <small>
+                                            You can manage your account, apps, modules, plugins, extensions, and more, from your <a href="https://my.recmanplugins.no/" target="_blank">account dashboard</a>. Of course, you can deactivate and remove your extension at any time as well.
+                                        </small>
+                                    </p> -->
+									<p><small>&nbsp;</small></p>
+									<h6>
+                                        We hope you'll enjoy using RAMP!
+                                    </h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<p>© 2016 <a href="https://www.recmanplugins.no/">Recman Apps, Modules and Plugins</a>. All rights reserved.</p>
+	<p> Handcrafted with <i class="fa fa-heart" aria-hidden="true"></i> and a lot of <i class="fa fa-coffee" aria-hidden="true"></i></p>
+	<p><small>You can get in touch with us at <a href="mailto:hello@recmanplugins.no">hello@recmanplugins.no</a> and be sure to take a look at our <a href="#" class="terms-of-service">Terms of Service</a>.</small></p>
+</footer>
+<div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="RAMP Terms of Service">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">RAMP Terms of Service</h3>
+            </div>
+
+            <div class="modal-body">
+                <p>Last modified: June 21, 2016
+                </p>
+                <h4>Welcome to RAMP!</h4>
+				<p>Thanks for using our products and services (“Services”). The Services are provided by Recman Apps, Modules and Plugins DA (“RAMP”), located at Tordenskiolds gate 3, 0160 Oslo, Norway.
+				</p>
+				<p>By using our Services, you are agreeing to these terms (the “Agreement”). Please read them carefully.
+				</p>
+				<p>Our Services are very diverse, so sometimes additional terms or product requirements (including age requirements) may apply. Additional terms will be available with the relevant Services, and those additional terms become part of your agreement with
+					us if you use those Services.
+				</p>
+				<h4 id="toc-services">Using our Services</h4>
+				<p>You must follow any policies made available to you within the Services.
+				</p>
+				<p>Don’t misuse our Services. For example, don’t interfere with our Services or try to access them using a method other than the interface and the instructions that we provide. You may use our Services only as permitted by law, including applicable export
+					and re-export control laws and regulations. We may suspend or stop providing our Services to you if you do not comply with our terms or policies or if we are investigating suspected misconduct.
+				</p>
+				<p>Using our Services does not give you ownership of any intellectual property rights in our Services or the content you access. You may not use content from our Services unless you obtain permission from its owner or are otherwise permitted by law.
+					These terms do not grant you the right to use any branding or logos used in our Services. Don’t remove, obscure, or alter any legal notices displayed in or along with our Services.
+				</p>
+				<p>Our Services display some content that is not RAMP’s. This content is the sole responsibility of the entity that makes it available. We may review content to determine whether it is illegal or violates our policies, and we may remove or refuse to
+					display content that we reasonably believe violates our policies or the law. But that does not necessarily mean that we review content, so please don’t assume that we do.
+				</p>
+				<p>In connection with your use of the Services, we may send you service announcements, administrative messages, and other information. You may opt out of some of those communications.
+				</p>
+				<p>Some of our Services are available on mobile devices. Do not use such Services in a way that distracts you and prevents you from obeying traffic or safety laws.
+				</p>
+				<h4 id="toc-account">Your RAMP Account</h4>
+				<p>You may need a RAMP Account in order to use some of our Services. You may create your own RAMP Account, or your RAMP Account may be assigned to you by an administrator, such as your employer or educational institution. If you are using a RAMP Account
+					assigned to you by an administrator, different or additional terms may apply and your administrator may be able to access or disable your account.
+				</p>
+				<p>To protect your RAMP Account, keep your password confidential. You are responsible for the activity that happens on or through your RAMP Account. Try not to reuse your RAMP Account password on third-party applications. If you learn of any unauthorized
+					use of your password or RAMP Account, <a href="#" class="customer-support unauthorized-access">please contact us</a>.
+				</p>
+				<h4 id="toc-protection">Privacy and Copyright Protection</h4>
+				<p>RAMP’s privacy policies explain how we treat your personal data and protect your privacy when you use our Services. By using our Services, you agree that RAMP can use such data in accordance with our privacy policies.
+				</p>
+				<p>We respond to notices of alleged copyright infringement and terminate accounts of repeat infringers according to the process set out in the Norwegian Copyright Act.
+				</p>
+				<p>We provide information to help copyright holders manage their intellectual property online. If you think somebody is violating your copyrights and want to notify us, you can <a href="#" class="customer-support copyright-violation">submit a notice</a>.
+				</p>
+				<h4 id="toc-content">Your Content in our Services</h4>
+				<p>Some of our Services allow you to upload, submit, store, send or receive content. You retain ownership of any intellectual property rights that you hold in that content. In short, what belongs to you stays yours.
+				</p>
+				<p>When you upload, submit, store, send or receive content to or through our Services, you give RAMP (and those we work with) a worldwide license to use, host, store, reproduce, modify, create derivative works, communicate, publish, publicly perform,
+					publicly display and distribute such content. The rights you grant in this license are for the limited purpose of operating, promoting, and improving our Services, and to develop new ones. This license continues even if you stop using our Services.
+					Some Services may offer you ways to access and remove content that has been provided to that Service. Also, in some of our Services, there are terms or settings that narrow the scope of our use of the content submitted in those Services. Make sure
+					you have the necessary rights to grant us this license for any content that you submit to our Services.
+				</p>
+				<p>You can find more information about how RAMP uses and stores content in the privacy policy or additional terms for particular Services. If you submit feedback or suggestions about our Services, we may use your feedback or suggestions without obligation
+					to you.
+				</p>
+				<h4 id="toc-software">About Software in our Services</h4>
+				<p>When a Service requires or includes downloadable software, this software may update automatically on your device once a new version or feature is available. Some Services may let you adjust your automatic update settings.
+				</p>
+				<p>RAMP gives you a personal, worldwide, royalty-free, non-assignable and non-exclusive license to use the software provided to you by RAMP as part of the Services. This license is for the sole purpose of enabling you to use and enjoy the benefit of
+					the Services as provided by RAMP, in the manner permitted by these terms. You may not copy, modify, distribute, sell, or lease any part of our Services or included software, nor may you reverse engineer or attempt to extract the source code of that
+					software, unless laws prohibit those restrictions or you have our written permission.
+				</p>
+				<p>Open source software is important to us. Some software used in our Services may be offered under an open source license that we will make available to you. There may be provisions in the open source license that expressly override some of these terms.
+				</p>
+				<h4>Billing and Payment</h4>
+				<h6>Billing</h6>
+				<p>
+					Customer may elect one of the following billing options when placing its order for the Services.
+				</p>
+				<p>
+					<strong>Flexible Plan:</strong> If Customer selects this option, Customer will not be committed to purchase the Services for a pre-defined term, but will pay for the Services on a monthly basis. RAMP will bill Customer monthly in arrears for its
+					use of the Services. RAMP will provide Customer with the monthly rate for the Services when Customer orders the Services, and will use this rate to calculate the Fees, on a prorated basis, for Customer’s number of users in their selected Recruitment
+					Manager department during that month. Customer may pay for the Services using the payment options listed below.
+				</p>
+				<p>
+					<strong>Annual Plan:</strong> If Customer selects this option, Customer will be committed to purchasing the Services from RAMP for an annual term, and in exchange will receive a discount on the Services which will be reflected on Customer’s annual
+					payment. RAMP will bill Customer annually in arrears for its use of the Services when Customer has an annual commitment for the Services with RAMP. Customer may pay for the Services using the payment options listed below.
+				</p>
+				<h6>Payment</h6>
+				<p>
+					All payments due are in NOK (Norwegian kroner) unless otherwise indicated on the Order Page or invoice.
+				</p>
+				<p>
+					<strong>Invoices:</strong> Payments for invoices are due seven days after the invoice date, unless otherwise specified on the Order Page, and are considered delinquent after such date.
+				</p>
+				<p>
+					<strong>Delinquent Payments: </strong>Delinquent payments may bear interest at the rate of eight-and-one-half percent per month (or the highest rate permitted by law, if less) from the payment due date until paid in full. Customer will be responsible
+					for all reasonable expenses (including attorneys' fees) incurred by RAMP in collecting such delinquent amounts, except where such delinquent amounts are due to RAMP's billing inaccuracies.
+				</p>
+				<h6>Suspension for Non-Payment</h6>
+				<p>
+					<strong>Automatic Suspension: </strong>Customer will have fourteen days to pay RAMP delinquent Fees. If Customer does not pay RAMP delinquent Fees within fourteen days, RAMP will automatically suspend Customer’s use of the Services. The duration
+					of this suspension will be until Customer pays RAMP all outstanding Fees.
+				</p>
+				<p>
+					<strong>During Suspension: </strong>If Customer is on a monthly billing plan, and Customer is suspended for non-payment, RAMP will stop charging Customer monthly Fees during Customer’s suspension for non-payment. If Customer has an annual commitment
+					to RAMP for the Services, RAMP will continue to charge Customer monthly Fees during Customer’s suspension for non-payment and Customer must pay all outstanding Fees in order to resume its use of the Services.
+				</p>
+				<p>
+					<strong>Termination After Suspension: </strong>If Customer remains suspended for non-payment for more than sixty days, RAMP may terminate Customer for breach pursuant to section <em>"Modification and Termination of Services"</em>.
+				</p>
+				<h6>Taxes</h6>
+				<p>
+					Customer is responsible for any Taxes, and Customer will pay RAMP for the Services without any reduction for Taxes. If RAMP is obligated to collect or pay Taxes, the Taxes will be invoiced to Customer, unless Customer provides RAMP with a valid tax exemption
+					certificate authorized by the appropriate taxing authority. If Customer is required by law to withhold any Taxes from its payments to RAMP, Customer must provide RAMP with an official tax receipt or other appropriate documentation to support such
+					payments.
+				</p>
+				<h6>Purchase Orders</h6>
+				<p>
+					If Customer requires a purchase order number on its invoice, Customer will inform RAMP and RAMP will include such purchase order number on invoices following receipt. If Customer does not provide a purchase order number, Customer waives any purchase order
+					requirement and (a) RAMP will invoice Customer without a purchase order number; and (b) Customer agrees to pay invoices without a purchase order number referenced. Any terms and conditions on a purchase order do not apply to this Agreement and are
+					null and void.
+				</p>
+				<h4 id="toc-modification">Modification and Termination of Services</h4>
+				<p>We are constantly changing and improving our Services. We may add or remove functionalities or features, and we may suspend or stop a Service altogether.
+				</p>
+				<p>You can stop using our Services at any time, although we’ll be sorry to see you go. RAMP may also stop providing Services to you, or add or create new limits to our Services at any time.
+				</p>
+				<p>We believe that you own your data and preserving your access to such data is important. If we discontinue a Service, where reasonably possible, we will give you reasonable advance notice and a chance to get information out of that Service.
+				</p>
+				<h6>Termination for Breach</h6>
+				<p>
+					Either party may suspend performance or terminate this Agreement if: (i) the other party is in material breach of the Agreement and fails to cure that breach within thirty days after receipt of written notice; (ii) the other party ceases its business
+					operations or becomes subject to insolvency proceedings and the proceedings are not dismissed within ninety days; or (iii) the other party is in material breach of this Agreement more than two times notwithstanding any cure of such breaches.
+				</p>
+				<h6>Effects of Termination</h6>
+				<p>
+					If this Agreement terminates, then: (i) the rights granted by one party to the other will cease immediately (except as set forth in this Section); (ii) RAMP will provide Customer access to, and the ability to export, the Customer Data for a commercially
+					reasonable period of time at RAMP’s then-current rates for the applicable Services; (iii) after a commercially reasonable period of time, RAMP will delete Customer Data by removing pointers to it on RAMP’s active servers and overwriting it over time;
+					and (iv) upon request each party will promptly use commercially reasonable efforts to return or destroy all other Confidential Information of the other party. If a Customer on an annual plan terminates the Agreement prior to the conclusion of its
+					annual plan, RAMP will bill Customer, and Customer is responsible for paying RAMP, for the remaining unpaid amount of Customer’s annual commitment.
+				</p>
+				<h4 id="toc-warranties-disclaimers">Our Warranties and Disclaimers</h4>
+				<p>We provide our Services using a commercially reasonable level of skill and care and we hope that you will enjoy using them. But there are certain things that we don’t promise about our Services.
+				</p>
+				<p>OTHER THAN AS EXPRESSLY SET OUT IN THESE TERMS OR ADDITIONAL TERMS, NEITHER RAMP NOR ITS SUPPLIERS OR DISTRIBUTORS MAKE ANY SPECIFIC PROMISES ABOUT THE SERVICES. FOR EXAMPLE, WE DON’T MAKE ANY COMMITMENTS ABOUT THE CONTENT WITHIN THE SERVICES, THE
+					SPECIFIC FUNCTIONS OF THE SERVICES, OR THEIR RELIABILITY, AVAILABILITY, OR ABILITY TO MEET YOUR NEEDS. WE PROVIDE THE SERVICES “AS IS”.
+				</p>
+				<p>SOME JURISDICTIONS PROVIDE FOR CERTAIN WARRANTIES, LIKE THE IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. TO THE EXTENT PERMITTED BY LAW, WE EXCLUDE ALL WARRANTIES.
+				</p>
+				<h4 id="toc-liability">Liability for our Services</h4>
+				<p>WHEN PERMITTED BY LAW, RAMP, AND RAMP’S SUPPLIERS AND DISTRIBUTORS, WILL NOT BE RESPONSIBLE FOR LOST PROFITS, REVENUES, OR DATA, FINANCIAL LOSSES OR INDIRECT, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES.
+				</p>
+				<p>TO THE EXTENT PERMITTED BY LAW, THE TOTAL LIABILITY OF RAMP, AND ITS SUPPLIERS AND DISTRIBUTORS, FOR ANY CLAIMS UNDER THESE TERMS, INCLUDING FOR ANY IMPLIED WARRANTIES, IS LIMITED TO THE AMOUNT YOU PAID US TO USE THE SERVICES (OR, IF WE CHOOSE, TO
+					SUPPLYING YOU THE SERVICES AGAIN).
+				</p>
+				<p>IN ALL CASES, RAMP, AND ITS SUPPLIERS AND DISTRIBUTORS, WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE THAT IS NOT REASONABLY FORESEEABLE.
+				</p>
+				<h4 id="toc-business-uses">Business uses of our Services</h4>
+				<p>If you are using our Services on behalf of a business, that business accepts these terms. It will hold harmless and indemnify RAMP and its affiliates, officers, agents, and employees from any claim, suit or action arising from or related to the use
+					of the Services or violation of these terms, including any liability or expense arising from claims, losses, damages, suits, judgments, litigation costs and attorneys’ fees.
+				</p>
+				<h4 id="toc-about">About these Terms</h4>
+				<p>We may modify these terms or any additional terms that apply to a Service to, for example, reflect changes to the law or changes to our Services. You should look at the terms regularly. We’ll post notice of modifications to these terms on this page.
+					We’ll post notice of modified additional terms in the applicable Service. Changes will not apply retroactively and will become effective no sooner than fourteen days after they are posted. However, changes addressing new functions for a Service or
+					changes made for legal reasons will be effective immediately. If you do not agree to the modified terms for a Service, you should discontinue your use of that Service.
+				</p>
+				<p>If there is a conflict between these terms and the additional terms, the additional terms will control for that conflict.
+				</p>
+				<p>These terms control the relationship between RAMP and you. They do not create any third party beneficiary rights.
+				</p>
+				<p>If you do not comply with these terms, and we don’t take action right away, this doesn’t mean that we are giving up any rights that we may have (such as taking action in the future).
+				</p>
+				<p>If it turns out that a particular term is not enforceable, this will not affect any other terms.
+				</p>
+				<p>The Norwegian law will apply to any disputes arising out of or relating to these terms or the Services. All claims arising out of or relating to these terms or the Services will be litigated exclusively in the Oslo District Court, Oslo, Norway, and
+					you and RAMP consent to personal jurisdiction in those courts.
+				</p>
+				<p>If you wish to contact RAMP, <a href="#" class="customer-support">please feel free to do so here</a>.</p>
+			</div>
+			<div class="modal-footer">
+				<div class="col-sm-6">
+					<button type="button" class="btn btn-default btn-block" id="disagreeButton" data-dismiss="modal">Disagree</button>
+				</div>
+				<div class="col-sm-6">
+					<button type="button" class="btn btn-danger btn-block" id="agreeButton" data-dismiss="modal">Agree</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- @include includes/bottom.html -->
