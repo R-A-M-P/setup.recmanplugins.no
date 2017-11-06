@@ -1,5 +1,7 @@
 ```bash
 # First:
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/R-A-M-P/setup.recmanplugins.no.svg)](https://greenkeeper.io/)
 $ cd repo/build/
 
 # Next, install:
